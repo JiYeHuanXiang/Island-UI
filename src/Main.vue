@@ -148,8 +148,8 @@
     :show-close="false">
     <template #header="{ close, titleId, titleClass }">
       <div class="my-header">
-        <h4 :id="titleId" :class="titleClass" style="margin: 0.5rem">海豹新闻</h4>
-        <el-button type="success" :icon="Check" @click="checkNews(close)">确认已读</el-button>
+        <h4 :id="titleId" :class="titleClass" style="margin: 0.5rem">一键卡死</h4>
+        <el-button type="success" :icon="Check" @click="checkNews(close)">刷新</el-button>
       </div>
     </template>
 
@@ -188,9 +188,9 @@ const checkNews = async (close: any) => {
   console.log('newsMark', newsMark.value);
   const ret = await postUtilsCheckNews(newsMark.value);
   if (ret?.result) {
-    ElMessage.success('已阅读最新的海豹新闻');
+    ElMessage.success('按F5刷新页面推出');
   } else {
-    ElMessage.error('阅读海豹新闻失败');
+    ElMessage.error('按F5刷新页面推出');
   }
   await updateNews();
   close();
@@ -202,7 +202,7 @@ const updateNews = async () => {
     newsChecked.value = newsInfo.checked;
     newsMark.value = newsInfo.newsMark;
   } else {
-    ElMessage.error(newsInfo?.err ?? '获取海豹新闻失败');
+    ElMessage.error(newsInfo?.err ?? '获取失败');
   }
 };
 
@@ -229,7 +229,7 @@ const doUnlock = async () => {
 const checkPassword = async () => {
   if (!(await checkSecurity()).isOk) {
     ElMessageBox.alert(
-      '欢迎使用海豹核心。<br/>如果您的服务开启在公网，为了保证您的安全性，请前往<b>“综合设置->基本设置”</b>界面，设置<b>UI 界面密码</b>。<br/>或切换为只有本机可访问。<br><b>如果您不了解上面在说什么，请务必设置一个密码</b>',
+      '欢迎使用海岛核心。<br/>如果您的服务开启在公网，为了保证您的安全性，请前往<b>“综合设置->基本设置”</b>界面，设置<b>UI 界面密码</b>。<br/>或切换为只有本机可访问。<br><b>如果您不了解上面在说什么，请务必设置一个密码</b>',
       '提示',
       { dangerouslyUseHTMLString: true },
     );
