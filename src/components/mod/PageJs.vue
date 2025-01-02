@@ -79,8 +79,8 @@
                 tag="a"
                 target="_blank"
                 style="text-decoration: none"
-                href="https://github.com/sealdice/javascript"
-                >获取插件</el-button
+                href="https://www.baidu.com"
+                >获取不了插件</el-button
               >
             </el-space>
           </header>
@@ -836,11 +836,6 @@ let editor: EditorView;
 const jsLines = ref([] as string[]);
 
 const defaultText = [
-  '// 学习制作可以看这里：https://github.com/sealdice/javascript/tree/main/examples',
-  '// 下载插件可以看这里：https://github.com/sealdice/javascript/tree/main/scripts',
-  '// 使用 TypeScript，编写更容易 https://github.com/sealdice/javascript/tree/main/examples_ts',
-  '// 目前可用于：创建自定义指令，自定义 COC 房规，发送网络请求，读写本地数据',
-  '',
   "console.log('这是测试控制台');",
   "console.log('可以这样来查看变量详情：');",
   'console.log(Object.keys(seal));',

@@ -12,26 +12,20 @@
       </div>
       <div class="top-item" style="font-family: sans-serif; margin-top: 1rem">
         官方网站:
-        <el-link type="primary" target="_blank" href="FUCK"
-          >FUCK</el-link
+        <el-link type="primary" target="_blank" href="https://www.baidu.com"
+          >别看了，没官网</el-link
         >
       </div>
       <div class="top-item" style="font-family: sans-serif">
         使用手册:
-        <el-link type="primary" target="_blank" href="FUCK"
-          >FUCK</el-link
-        >
-      </div>
-      <div class="top-item" style="font-family: sans-serif">
-        投喂海豹:
-        <el-link type="primary" target="_blank" href="FUCK"
-          >FUCK</el-link
+        <el-link type="primary" target="_blank" href="https://www.baidu.com"
+          >没手册哈</el-link
         >
       </div>
       <div class="top-item" style="font-family: sans-serif">
         源码:
-        <el-link type="primary" target="_blank" href="NULL"
-          >NULL</el-link
+        <el-link type="primary" target="_blank" href="https://baidu.com"
+          >不开源哈</el-link
         >
       </div>
       <div class="top-item">
@@ -44,9 +38,20 @@
     感谢 ♪(･ω･)ﾉ
   </div>
   <div style="text-align: center; font-size: small; margin-bottom: 2rem; font-family: sans-serif">
-    特别鸣谢参与测试、反馈问题，帮助完善海豹指令的各位！以下列出感谢名单（排名不分先后）
+    特别鸣谢参与测试、反馈问题，帮助完善海岛指令的各位！以下列出感谢名单（排名不分先后）
   </div>
   <div class="about">
+    <div></div>
+    <div class="subtitle">猜猜我是谁</div>
+    <div style="margin-top: 2rem" class="subtitle">V?.?版本</div>
+    <div class="developers">
+      <el-link :underline="false" href="https://github.com/JiYeHuanXiang" target="_blank"
+        ><el-avatar
+          shape="circle"
+          :size="50"
+          :src="urlBase + '/sd-api/utils/ga/JiYeHuanXiang'" />极夜幻想</el-link
+      >
+    </div>
     <div></div>
     <div class="subtitle">社区协力</div>
 

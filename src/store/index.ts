@@ -166,13 +166,13 @@ export const useStore = defineStore('main', {
       talkLogs: [
         {
           content:
-            '海豹已就绪。此界面可视为私聊窗口。\n设置中添加 Master 名为 UI:1001\n即可在此界面使用 master 命令！',
+            '海岛已就绪。此界面可视为私聊窗口。\n设置中添加 Master 名为 UI:1001\n即可在此界面使用 master 命令！',
           isSeal: true,
           mode: 'private',
         },
         {
           content:
-            '海豹已就绪。此界面可视为群聊窗口。\n设置中添加 Master 名为 UI:1002\n即可在此界面使用 master 命令！',
+            '海岛已就绪。此界面可视为群聊窗口。\n设置中添加 Master 名为 UI:1002\n即可在此界面使用 master 命令！',
           isSeal: true,
           mode: 'group',
         },
@@ -358,7 +358,7 @@ export const useStore = defineStore('main', {
         case 15:
           {
             let version = '';
-            if (['Island', 'lagrange', 'newProxy'].includes(signServerUrl)) {
+            if (['sealdice', 'lagrange', 'newProxy'].includes(signServerUrl)) {
               version = signServerVersion;
             }
             info = await postAddLagrange(account, signServerUrl, version, false);
@@ -367,7 +367,7 @@ export const useStore = defineStore('main', {
         case 16:
           {
             let version = '';
-            if (['Island', 'lagrange', 'newProxy'].includes(signServerUrl)) {
+            if (['sealdice', 'lagrange', 'newProxy'].includes(signServerUrl)) {
               version = signServerVersion;
             }
             info = await postAddLagrange(account, signServerUrl, version, true);

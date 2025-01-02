@@ -148,8 +148,9 @@
     :show-close="false">
     <template #header="{ close, titleId, titleClass }">
       <div class="my-header">
-        <h4 :id="titleId" :class="titleClass" style="margin: 0.5rem">一键卡死</h4>
-        <el-button type="success" :icon="Check" @click="checkNews(close)">刷新</el-button>
+        <!--<h4 :id="titleId" :class="titleClass" style="margin: 0.5rem">海豹新闻</h4>-->
+        <h4 :id="titleId" :class="titleClass" style="margin: 0.5rem">卡死新闻</h4>
+        <el-button type="success" :icon="Check" @click="checkNews(close)">确认已读</el-button>
       </div>
     </template>
 
@@ -188,9 +189,9 @@ const checkNews = async (close: any) => {
   console.log('newsMark', newsMark.value);
   const ret = await postUtilsCheckNews(newsMark.value);
   if (ret?.result) {
-    ElMessage.success('按F5刷新页面推出');
+    ElMessage.success('已阅读最新的海岛新闻');
   } else {
-    ElMessage.error('按F5刷新页面推出');
+    ElMessage.error('阅读海岛新闻失败');
   }
   await updateNews();
   close();
@@ -202,7 +203,7 @@ const updateNews = async () => {
     newsChecked.value = newsInfo.checked;
     newsMark.value = newsInfo.newsMark;
   } else {
-    ElMessage.error(newsInfo?.err ?? '获取失败');
+    ElMessage.error(newsInfo?.err ?? '获取海岛新闻失败');
   }
 };
 
